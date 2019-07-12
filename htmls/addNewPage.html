@@ -1,0 +1,29 @@
+<div #container class="container carbon--theme--white">
+	<div class="demo-content" ibmGrid>
+		<div ibmRow>
+			<div ibmCol [columnNumbers]="{'lg':6, 'md':12, 'sm': 12}">
+			</div>
+			<div ibmCol [columnNumbers]="{'lg':6, 'md':12, 'sm': 12}">
+				<ibm-radio-group style="position: absolute; right: 0">
+					<ibm-radio checked="true" (change)="onWhiteChange()">Theme 1</ibm-radio>
+					<ibm-radio (change)="onG10Change()">Theme 2</ibm-radio>
+					<ibm-radio (change)="onG90Change()">Theme 3</ibm-radio>
+					<ibm-radio  (change)="onG100Change()">Theme 4</ibm-radio>
+				</ibm-radio-group>
+			</div>
+		</div>
+
+		<div class="body-text" ibmRow style="height: 500px;">
+			<div><!--
+				Copyright IBM Corp. 2016, 2018
+			  
+				This source code is licensed under the Apache-2.0 license found in the
+				LICENSE file in the root directory of this source tree.
+			  -->
+				<p>Tell me what to add to the page</p>
+  
+			  </div>
+		</div>
+		<router-outlet></router-outlet>
+	</div>
+</div>

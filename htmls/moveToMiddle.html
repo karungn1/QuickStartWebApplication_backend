@@ -1,0 +1,54 @@
+<div #container class="container carbon--theme--white">
+	<div class="demo-content" ibmGrid>
+		<div ibmRow>
+			<div ibmCol [columnNumbers]="{'lg':6, 'md':12, 'sm': 12}">
+			</div>
+			<div ibmCol [columnNumbers]="{'lg':6, 'md':12, 'sm': 12}">
+				<ibm-radio-group style="position: absolute; right: 0">
+					<ibm-radio checked="true" (change)="onWhiteChange()">Theme 1</ibm-radio>
+					<ibm-radio (change)="onG10Change()">Theme 2</ibm-radio>
+					<ibm-radio (change)="onG90Change()">Theme 3</ibm-radio>
+					<ibm-radio (change)="onG100Change()">Theme 4</ibm-radio>
+				</ibm-radio-group>
+			</div>
+		</div>
+
+		<div class="body-text" ibmRow style="height: 500px; justify-content: space-evenly;">
+			<div><!--
+				Copyright IBM Corp. 2016, 2018
+			  
+				This source code is licensed under the Apache-2.0 license found in the
+				LICENSE file in the root directory of this source tree.
+			  -->
+			  
+			  <div class="bx--form-item bx--text-input-wrapper">
+				<label for="text-input-3" class="bx--label">Email</label>
+				<div class="bx--text-input__field-wrapper">
+				  <input id="text-input-3" type="text" class="bx--text-input" placeholder="Enter User name">
+				</div>
+			  </div>
+			  
+			  <div class="bx--form-item bx--text-input-wrapper">
+				<label for="text-input-3" class="bx--label">Password</label>
+				<div class="bx--text-input__field-wrapper">
+				  <input id="text-input-3" type="PASSWORD" class="bx--text-input" placeholder="Enter Password">
+				</div>
+			  </div>
+	
+			  
+			  <div >
+				<button class="bx--btn bx--btn--primary bx--btn--sm" type="button" style="margin:10px 10px 10px 0px">
+					Reset
+				  </button>
+				  
+				<button class="bx--btn bx--btn--primary bx--btn--sm" type="button" style="margin:10px 10px 10px 0px">
+					Login
+				  </button>
+			  </div>
+			
+  
+			  </div>
+		</div>
+		<router-outlet></router-outlet>
+	</div>
+</div>
