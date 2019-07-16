@@ -3,18 +3,22 @@ if test "$1" = "create"
 then
     cd /c/workarea/autoUIPoc/new/
     # to download
-    git clone https://github.ibm.com/karungn1/QuickStartWebApplication.git
+    git clone https://github.com/karungn1/QuickStartWebApplication_frontend.git
 
     # to install
-    cd QuickStartWebApplication
+    cd QuickStartWebApplication_frontend
     npm install
 
-    #add Login page
-    cp /c/workarea/autoUIPoc/app.component.html /c/workarea/autoUIPoc/new/QuickStartWebApplication/src/app/
-    cp /c/workarea/autoUIPoc/home.component.html /c/workarea/autoUIPoc/new/QuickStartWebApplication/src/app/home/home/
-
     # start and open in browser
-    ng serve --open
+    ng serve --port 4201 --open
+    #ng serve --open
+
+    
+    #add Login page
+    cp /c/workarea/autoUIPoc/new/QuickStartWebApplication_backend/htmls/app.component.html /c/workarea/autoUIPoc/new/QuickStartWebApplication_frontend/src/app/
+    cp /c/workarea/autoUIPoc/new/QuickStartWebApplication_backend/htmls/web-speech.component.html /c/workarea/autoUIPoc/new/QuickStartWebApplication_frontend/src/app/web-speech/web-speech.component.html
+    #cp /c/workarea/autoUIPoc/new/QuickStartWebApplication_backend/htmls/home.component.html /c/workarea/autoUIPoc/new/QuickStartWebApplication_frontend/src/app/home/home/
+
 
     #open VS code
     #code .
@@ -23,7 +27,7 @@ then
 
 else
 
-    cp /c/workarea/autoUIPoc/htmls/$1 /c/workarea/autoUIPoc/new/QuickStartWebApplication/src/app/app.component.html
+    cp /c/workarea/autoUIPoc/new/QuickStartWebApplication_backend/htmls/$1 /c/workarea/autoUIPoc/new/QuickStartWebApplication_frontend/src/app/app.component.html
 
     cmd /k
 
