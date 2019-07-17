@@ -1,4 +1,5 @@
 echo $1
+sleep 2
 if test "$1" = "create"
 then
     cd /c/workarea/autoUIPoc/new/
